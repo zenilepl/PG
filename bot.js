@@ -806,5 +806,4 @@ message.channel.stopTyping()
 })
 })
 }
-});
 client.login("NTE1MjkxNDMwODU2NTU2NTQ2.DtnenQ.769D3lHnFK3UiT4xBTYg7v2umxc");  // توكن حقق
