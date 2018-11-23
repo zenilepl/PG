@@ -47,7 +47,6 @@ client.on("message", message => {
       return message.channel.send({embed});
     }
     
-  });
 
 
 
