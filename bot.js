@@ -15,22 +15,6 @@ client.on("message", message => {
     let score;
     
     if (message.guild) {
-      score = client.getScore.get(message.author.id, message.guild.id);
-      if (!score) {
-        score = { id: `${message.guild.id}-${message.author.id}`, user: message.author.id, guild: message.guild.id, points: 0, level: 1 };
-      }
-      score.points++;
-      const curLevel = Math.floor(0.1 * Math.sqrt(score.points));
-      client.setScore.run(score);
-    }
-    if (message.content.indexOf(prefix) !== 0) return;
-  
-    const args = message.content.slice(prefix.length).trim().split(/ +/g);
-    const command = args.shift().toLowerCase();
-  
-    if(command === "points") {
-      return message.reply(`You currently have ${score.points} points and are level ${score.level}!`);
-    }
     
     if(command === "give") {
       if(!message.author.id === message.guild.owner) return message.reply("You're not the boss of me, you can't do that!");
